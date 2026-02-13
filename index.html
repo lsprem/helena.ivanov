@@ -7,21 +7,97 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; color: #2d3436; line-height: 1.6; background-color: #ffffff; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #1e272e; }
-        .hero { background: #f4f7f9; padding: 100px 0; border-bottom: 1px solid #eee; }
-        .navbar { background: white; border-bottom: 1px solid #eee; padding: 1rem 0; }
-        .navbar-brand { font-weight: 700; letter-spacing: 1px; color: #002b5b !important; }
-        .btn-primary { background: #002b5b; border: none; padding: 12px 30px; border-radius: 0; }
-        .btn-primary:hover { background: #001f42; }
-        .section-padding { padding: 80px 0; }
-        .report-card { border: none; background: #ffffff; border-left: 4px solid #002b5b; transition: 0.3s; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .report-card:hover { transform: translateX(10px); }
-        .badge-academic { background: #002b5b; color: white; font-weight: 500; padding: 8px 15px; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 1rem; display: inline-block; }
-        footer { background: #1e272e; color: white; padding: 60px 0; }
-        .text-blue { color: #002b5b; }
+       :root {
+    --primary: #002b5b;
+    --accent: #d4af37; /* Gold accent for a PR/Prestige feel */
+    --glass: rgba(255, 255, 255, 0.7);
+    --bg-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: var(--bg-gradient);
+    color: #1a1a1a;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+
+/* Kinetic Hero Animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero { 
+    padding: 120px 0; 
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+.glass-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
+}
+
+/* Bento Grid Layout for Media */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Modern Forms */
+.form-control {
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(0, 43, 91, 0.1);
+    border-color: var(--primary);
+}
+
+.btn-modern {
+    border-radius: 50px;
+    padding: 14px 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+/* Navigation Blur */
+.navbar {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
     </style>
 </head>
+    <script src="https://unpkg.com/scrollreveal"></script>
+<script>
+    ScrollReveal().reveal('.glass-card', { 
+        delay: 200, 
+        distance: '50px', 
+        origin: 'bottom', 
+        interval: 100 
+    });
+</script>
 <body>
 
 <nav class="navbar navbar-expand-lg sticky-top">
@@ -83,30 +159,34 @@
 
 <section id="media" class="section-padding">
     <div class="container">
-        <h2 class="mb-5">Selected Publications & Global Media</h2>
-        
-        <div class="report-card">
-            <span class="text-muted small">Panel • Henry Jackson Society (Jan 2026)</span>
-            <h4 class="mt-2 text-blue">Losing the Narrative: Can Mainstream Media Win Back Public Trust?</h4>
-            <p class="text-secondary mb-0">A high-level discussion on the erosion of trust in traditional media and the rise of social-media-driven disinformation.</p>
-        </div>
+        <h2 class="mb-5 text-center">Current Insights & Media</h2>
+        <div class="bento-grid">
+            
+            <div class="glass-card" style="grid-column: span 1;">
+                <span class="badge bg-dark mb-2">Jan 2026 Panel</span>
+                <h4>Mainstream Media & Trust</h4>
+                <p class="small text-muted">A high-level debate at the Henry Jackson Society regarding the future of narrative control in an era of disinformation.</p>
+                <a href="#" class="text-primary small fw-bold">Watch Recording →</a>
+            </div>
 
-        <div class="report-card">
-            <span class="text-muted small">Report • Henry Jackson Society (2025)</span>
-            <h4 class="mt-2 text-blue">Human Rights NGOs: A Crisis of Trust</h4>
-            <p class="text-secondary mb-0">Analyzing the credibility deficit in international NGOs and the strategic implications for global human rights norms.</p>
-        </div>
+            <div class="glass-card">
+                <span class="badge bg-primary mb-2">Policy Report</span>
+                <h4>Crisis of Trust in NGOs</h4>
+                <p class="small">Deep dive into the erosion of NGO credibility in global geopolitics.</p>
+            </div>
 
-        <div class="report-card">
-            <span class="text-muted small">Policy Paper • Henry Jackson Society (2025)</span>
-            <h4 class="mt-2 text-blue">Disinformation on Campus: The Rise of Antisemitism</h4>
-            <p class="text-secondary mb-0">A definitive study on how online disinformation shapes campus climates and the failure of institutional responses.</p>
-        </div>
+            <div class="glass-card">
+                <span class="badge bg-info mb-2 text-dark">LSE PhD Model</span>
+                <h4>The Propaganda Framework</h4>
+                <p class="small">A multi-phase model for analyzing state-sponsored media manipulation.</p>
+            </div>
+            
+            <div class="glass-card">
+                <span class="badge bg-secondary mb-2">Commentary</span>
+                <h4>Balkan Stability 2026</h4>
+                <p class="small">Recent analysis for the BBC on regional security threats.</p>
+            </div>
 
-        <div class="report-card">
-            <span class="text-muted small">Media Appearances • Global Reach</span>
-            <h4 class="mt-2 text-blue">BBC, Al Jazeera, France24 & The Telegraph</h4>
-            <p class="text-secondary mb-0">Regular expert commentary on Balkan security, European unity (VE Day 2025 analysis), and Russian hybrid warfare.</p>
         </div>
     </div>
 </section>
