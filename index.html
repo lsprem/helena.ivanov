@@ -133,14 +133,15 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
         <div class="text-center mb-5">
             <h2 class="display-5">Specialized Expertise</h2>
             <p class="text-secondary">Bridging Academic Theory and Policy Reality</p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="p-4 bg-white h-100 shadow-sm border-top border-4 border-primary">
-                    <h3 class="h5 fw-bold">Propaganda Modeling</h3>
-                    <p class="small text-muted">A context-agnostic framework for analyzing how media manipulation leads to real-world violence.</p>
-                </div>
-            </div>
+       <div class="glass-card bento-large">
+    <span class="badge bg-primary mb-3 px-3">Primary Intellectual Asset</span>
+    <h3 class="mb-3 text-blue">The Propaganda Model of Violence</h3>
+    <p class="text-secondary">Dr. Ivanov’s seminal PhD research (LSE) provides a context-agnostic framework for analyzing state-sponsored media manipulation and its link to political violence.</p>
+    
+    <button class="btn btn-primary mt-3 rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#propagandaModel">
+        Explore the Model
+    </button>
+</div>
             <div class="col-md-4">
                 <div class="p-4 bg-white h-100 shadow-sm border-top border-4 border-primary">
                     <h3 class="h5 fw-bold">Balkan Security</h3>
@@ -228,5 +229,51 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="modal fade" id="propagandaModel" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content glass-modal shadow-2xl">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold text-blue">The Ivanov Propaganda Model</h2>
+                    <p class="text-muted">Developed at LSE: <em>Inside Propaganda: Serbian Media in the Yugoslav Wars</em></p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="p-4 bg-light rounded-4 h-100">
+                            <h5 class="fw-bold mb-3"><span class="text-accent">01.</span> Key Phases</h5>
+                            <p class="small text-secondary">The model identifies the progressive steps of media manipulation, from initial narrative shaping to the active justification of civilian targeting.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-4 bg-light rounded-4 h-100">
+                            <h5 class="fw-bold mb-3"><span class="text-accent">02.</span> Functions</h5>
+                            <p class="small text-secondary">Analyzing how propaganda serves to mobilize supporters, silence dissent, and create a moral vacuum for state-led violence.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-4 bg-light rounded-4 h-100">
+                            <h5 class="fw-bold mb-3"><span class="text-accent">03.</span> Discourses</h5>
+                            <p class="small text-secondary">Focuses on "Us vs. Them" narratives, the weaponization of history, and the strategic construction of victimhood.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-4 bg-light rounded-4 h-100">
+                            <h5 class="fw-bold mb-3"><span class="text-accent">04.</span> Techniques</h5>
+                            <p class="small text-secondary">Deconstructs the specific rhetorical tools used to dehumanize targets and normalize exclusion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 p-4 border-start border-4 border-primary bg-white shadow-sm">
+                    <p class="mb-0 small font-italic">"Commended by examiners for making a novel and distinct contribution to the study of propaganda and violence... applicable to modern conflicts in Ukraine and the Middle East."</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
