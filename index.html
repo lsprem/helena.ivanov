@@ -111,13 +111,38 @@
     </div>
 </section>
 
-<footer id="contact">
-    <div class="container text-center">
-        <h2 class="text-white mb-4">Contact</h2>
-        <p class="mb-4">For media inquiries, research consultations, or speaking engagements.</p>
-        <p class="lead fw-bold">contact@helenivanovpr.com</p>
-        <div class="mt-5 pt-5 border-top border-secondary opacity-50">
-            <p class="small mb-0">&copy; 2026 Helena Ivanov PR. All rights reserved.</p>
+<footer id="contact" class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-6">
+                <h2 class="text-white mb-4">Contact & Inquiries</h2>
+                <p class="mb-5 opacity-75">For media requests, research consulting, or speaking engagements, please reach out via the form below.</p>
+                
+                <form action="https://formspree.io/f/mlgwjoop" method="POST" class="text-start bg-white p-4 rounded shadow">
+                    <div class="mb-3">
+                        <label class="form-label text-dark">Email Address</label>
+                        <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-dark">Inquiry Type</label>
+                        <select name="subject" class="form-select">
+                            <option>Media Commentary</option>
+                            <option>Research Consultation</option>
+                            <option>Speaking Engagement</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-dark">Message</label>
+                        <textarea name="message" class="form-control" rows="4" placeholder="How can Dr. Ivanov assist?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 py-2">Send Message</button>
+                </form>
+
+                <div class="mt-5 pt-5 border-top border-secondary opacity-50">
+                    <p class="small mb-0">&copy; 2026 Helena Ivanov PR. Built for Impact.</p>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
