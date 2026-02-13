@@ -3,63 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Helena Ivanov | Strategic Advisor & PR</title>
+    <title>Dr. Helena Ivanov | Strategic Advisor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --navy: #002b5b;
             --accent: #d4af37;
-            --glass: rgba(255, 255, 255, 0.85);
+            --glass: rgba(255, 255, 255, 0.9);
             --bg: #f8f9fa;
         }
 
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: #1a1a1a; scroll-behavior: smooth; overflow-x: hidden; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: #1a1a1a; scroll-behavior: smooth; }
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--navy); }
+        
+        /* Typography Fix: Standardize Ampersand */
+        .amp { font-family: 'Plus Jakarta Sans', sans-serif !important; font-weight: 400; }
 
-        .navbar { background: rgba(255, 255, 255, 0.8) !important; backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .navbar { background: rgba(255, 255, 255, 0.9) !important; backdrop-filter: blur(15px); border-bottom: 1px solid rgba(0,0,0,0.05); }
         
         .hero { padding: 160px 0 100px 0; background: #fff; }
         
+        /* Hero Badge Design Upgrade */
+        .hero-badge { 
+            background: rgba(0, 43, 91, 0.05); 
+            color: var(--navy); 
+            border: 1px solid rgba(0, 43, 91, 0.1);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
         .glass-card {
             background: var(--glass);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 28px;
-            padding: 35px;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            padding: 30px;
+            transition: all 0.4s ease;
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
             height: 100%;
         }
-        .glass-card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .glass-card:hover { transform: translateY(-8px); border-color: var(--accent); }
+
+        /* Color Coding for Categories */
+        .badge-media { background: #e3f2fd; color: #0d47a1; } /* Blue */
+        .badge-oped { background: #f3e5f5; color: #7b1fa2; } /* Purple */
+        .badge-report { background: #e8f5e9; color: #2e7d32; } /* Green */
+        .badge-talk { background: #fff3e0; color: #ef6c00; } /* Orange */
 
         .bento-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
-        .trust-bar span { font-size: 0.7rem; letter-spacing: 3px; font-weight: 800; color: #aaa; text-transform: uppercase; }
-        .service-tag { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 700; margin-bottom: 10px; display: block; }
-        
-        .btn-navy { background: var(--navy); color: white; border-radius: 100px; padding: 14px 35px; font-weight: 700; border: none; transition: 0.3s; }
-        .btn-navy:hover { background: #001f42; transform: scale(1.05); color: white; }
+        /* Rotating Marquee for Trust Bar */
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            background: #fff;
+            padding: 40px 0;
+            border-top: 1px solid #eee;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+        .marquee-content span {
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            font-weight: 800;
+            color: #ccc;
+            margin: 0 60px;
+            text-transform: uppercase;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
 
-        .glass-modal { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(25px); border-radius: 40px !important; border: none; }
-        
-        /* Ensure image displays correctly */
-        .hero-img { border-radius: 50px; box-shadow: -30px 30px 80px rgba(0,0,0,0.12); width: 100%; max-height: 550px; object-fit: cover; }
+        .btn-navy { background: var(--navy); color: white; border-radius: 100px; padding: 14px 35px; font-weight: 700; border: none; }
+        .hero-img { border-radius: 50px; box-shadow: -20px 20px 60px rgba(0,0,0,0.1); width: 100%; object-fit: cover; }
     </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-        <a class="navbar-brand fw-bold d-flex align-items-center" href="#" style="color: var(--navy);">
-            <img src="Gemini_Generated_Image_kj5442kj5442kj54.png" alt="Logo" style="height: 40px;" class="me-2">
-            HELENA <span style="font-weight: 300; margin-left: 5px;">IVANOV PR</span>
+        <a class="navbar-brand" href="#">
+            <img src="Gemini_Generated_Image_kj5442kj5442kj54.png" alt="Logo" style="height: 55px;">
         </a>
         <div class="ms-auto d-flex align-items-center">
+            <a href="#about" class="nav-link me-3 d-none d-md-block fw-semibold">About</a>
+            <a href="#research" class="nav-link me-3 d-none d-md-block fw-semibold">Research</a>
             <a href="#services" class="nav-link me-3 d-none d-md-block fw-semibold">Services</a>
             <a href="#media" class="nav-link me-4 d-none d-md-block fw-semibold">Media</a>
             <button class="btn btn-navy btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal">Work With Us</button>
@@ -67,129 +105,105 @@
     </div>
 </nav>
 
-<header class="hero border-bottom">
+<header class="hero">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <span class="badge bg-primary rounded-pill px-3 py-2 mb-4 shadow-sm">PhD, LSE • Oxford Scholar</span>
+                <div class="hero-badge mb-4 d-inline-block">PhD, LSE <span class="mx-2">•</span> Oxford Scholar</div>
                 <h1 class="display-2 mb-4">The Science of <br><i style="font-weight: 400; color: var(--accent);">Public Narrative.</i></h1>
-                <p class="lead mb-5 text-secondary pe-lg-5">Dr. Helena Ivanov deconstructs complex geopolitical research into actionable media strategy and policy resilience. Specialized in <strong>propaganda modeling</strong> and <strong>international security</strong>.</p>
+                <p class="lead mb-5 text-secondary pe-lg-5">Dr. Helena Ivanov deconstructs complex geopolitical research into actionable media strategy and policy resilience.</p>
                 <div class="d-flex gap-3">
-                    <button class="btn btn-navy btn-lg shadow" data-bs-toggle="modal" data-bs-target="#contactModal">Consultancy Inquiries</button>
+                    <button class="btn btn-navy btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">Work With Us</button>
                     <a href="#media" class="btn btn-outline-dark btn-lg rounded-pill px-4">Explore Insights</a>
                 </div>
             </div>
-            <div class="col-lg-6 d-none d-lg-block">
-                <img src="Helena_Ivanov_3.jpg" alt="Dr. Helena Ivanov" class="hero-img">
+            <div class="col-lg-6 d-none d-lg-block text-end">
+                <img src="Helena_Ivanov_3.jpg" alt="Helena Ivanov" class="hero-img">
             </div>
         </div>
     </div>
 </header>
 
-<div class="trust-bar py-5 bg-white shadow-sm">
-    <div class="container text-center">
-        <div class="d-flex justify-content-center flex-wrap align-items-center gap-5 opacity-75">
-            <span>London School of Economics</span>
-            <span>Oxford University</span>
-            <span>BBC World News</span>
-            <span>Al Jazeera</span>
-            <span>The Telegraph</span>
-            <span>UnHerd</span>
+<section id="about" class="py-5 bg-white">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="display-5 mb-4">About Dr. Ivanov</h2>
+                <p>Dr. Helena Ivanov is an Associate Research Fellow at the <strong>Henry Jackson Society</strong>. She recently completed her PhD at the <strong>London School of Economics</strong>, following an MPhil in Political Theory at the <strong>University of Oxford</strong> and a BA in Politics at the <strong>University of Belgrade</strong>.</p>
+                <p>Her work bridges the gap between high-level academic theory and the front lines of international media. She is a frequent commentator on global security, appearing on major outlets to provide clarity on the most pressing geopolitical crises of our time.</p>
+                <div class="mt-4">
+                    <button class="btn btn-outline-primary rounded-pill me-3">View Full Bio</button>
+                    <button class="btn btn-link text-navy text-decoration-none fw-bold">Download CV ↓</button>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
-<section id="services" class="py-5 bg-light">
+<section id="research" class="py-5 bg-light border-top border-bottom">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="glass-card text-center p-5">
+                    <span class="text-accent fw-bold text-uppercase mb-3 d-block letter-spacing-2">Intellectual Framework</span>
+                    <h2 class="display-4 mb-4">The Propaganda Model of Violence</h2>
+                    <p class="lead text-secondary mb-5">Commanded by LSE doctoral examiners as a "novel and distinct contribution," this framework deconstructs how narratives mobilize violence against civilians.</p>
+                    <button class="btn btn-primary btn-lg rounded-pill px-5" data-bs-toggle="modal" data-bs-target="#researchModal">Explore the Model</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="py-5">
     <div class="container py-5">
         <div class="text-center mb-5">
-            <h2 class="display-4">Consultancy Services</h2>
-            <p class="text-muted">High-impact advisory for institutions and public figures.</p>
+            <h2 class="display-5">Consultancy Services</h2>
+            <p class="text-muted">Strategic advisory <span class="amp">&</span> impact.</p>
         </div>
         <div class="row g-4">
-            <div class="col-md-4">
-                <div class="glass-card">
-                    <span class="service-tag">Intelligence</span>
-                    <h4>Geopolitical Risk Analysis</h4>
-                    <p class="small text-muted mb-0">Bespoke reporting on Balkan security dynamics, Russian hybrid influence, and regional stability assessments for global stakeholders.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="glass-card">
-                    <span class="service-tag">Communication</span>
-                    <h4>Media Strategy & Advisory</h4>
-                    <p class="small text-muted mb-0">Strategic coaching for experts navigating high-pressure international media environments and adversarial inquiry.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="glass-card">
-                    <span class="service-tag">Resilience</span>
-                    <h4>Narrative Vulnerability Audits</h4>
-                    <p class="small text-muted mb-0">Applying proprietary propaganda models to identify institutional narrative entry points and protect reputation.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="glass-card">
-                    <span class="service-tag">Diplomacy</span>
-                    <h4>Public Diplomacy</h4>
-                    <p class="small text-muted mb-0">Building institutional trust through op-ed placement, white-paper development, and networking within policy ecosystems.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="glass-card">
-                    <span class="service-tag">Transfer</span>
-                    <h4>Academic-to-Policy Transfer</h4>
-                    <p class="small text-muted mb-0">Transforming complex academic findings into digestible, high-impact policy briefs for decision-makers.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="glass-card">
-                    <span class="service-tag">Crisis</span>
-                    <h4>Crisis Communication</h4>
-                    <p class="small text-muted mb-0">Rapid-response deconstruction of hostile narratives and the deployment of evidence-based counter-messaging.</p>
-                </div>
-            </div>
+            <div class="col-md-4"><div class="glass-card"><h4>Geopolitical Risk</h4><p class="small text-muted">Bespoke reporting on Balkan security and Russian hybrid influence.</p></div></div>
+            <div class="col-md-4"><div class="glass-card"><h4>Media Advisory</h4><p class="small text-muted">Strategic coaching for experts navigating adversarial media inquiries.</p></div></div>
+            <div class="col-md-4"><div class="glass-card"><h4>Disinformation Audits</h4><p class="small text-muted">Identifying institutional narrative entry points and protecting reputation.</p></div></div>
+            <div class="col-md-4"><div class="glass-card"><h4>Public Diplomacy</h4><p class="small text-muted">Building institutional trust through op-ed placement and white-papers.</p></div></div>
+            <div class="col-md-4"><div class="glass-card"><h4>Policy Transfer</h4><p class="small text-muted">Transforming academic findings into high-impact policy briefs.</p></div></div>
+            <div class="col-md-4"><div class="glass-card"><h4>Crisis Strategy</h4><p class="small text-muted">Rapid-response deconstruction of hostile narratives.</p></div></div>
         </div>
     </div>
 </section>
 
-<section id="media" class="py-5">
+<section id="media" class="py-5 bg-white">
     <div class="container py-5">
-        <h2 class="display-5 text-center mb-5">Insights & Impact</h2>
+        <h2 class="display-5 text-center mb-5">Insights <span class="amp">&</span> Impact</h2>
         <div class="bento-grid">
-            <div class="glass-card"><span class="badge bg-dark mb-2">Jan 2026</span><h6>HJS: Losing the Narrative</h6><p class="small text-muted">Addressing the crisis of trust in mainstream media amidst algorithmic disinformation.</p></div>
-            <div class="glass-card"><span class="badge bg-primary mb-2 text-white">Report</span><h6>NGOs: Trust Crisis</h6><p class="small text-muted">Examining credibility erosion in international NGOs post-October 7th.</p></div>
-            <div class="glass-card" style="border-left: 5px solid var(--accent);"><span class="badge bg-warning text-dark mb-2">PhD Model</span><h6>The Propaganda Framework</h6><p class="small text-muted">A context-agnostic framework for analyzing state-led manipulation.</p></div>
-            <div class="glass-card"><span class="badge bg-info mb-2 text-dark">BBC Analysis</span><h6>Serbian Foreign Policy</h6><p class="small text-muted">The delicate balancing act between the EU, Russia, and the West.</p></div>
-            <div class="glass-card"><span class="badge bg-secondary mb-2">UnHerd</span><h6>The Balkan Powderkeg</h6><p class="small text-muted">Why current strategies in South-East Europe are stalling.</p></div>
-            <div class="glass-card"><span class="badge bg-danger mb-2">France24</span><h6>EU Strategic Autonomy</h6><p class="small text-muted">Live analysis of European defense strategy and hybrid threats.</p></div>
-            <div class="glass-card"><span class="badge bg-dark mb-2">Lecture</span><h6>LSE: Violence & Discourse</h6><p class="small text-muted">Guest lecture on dehumanization in media and civilian harm.</p></div>
-            <div class="glass-card"><span class="badge bg-info mb-2 text-dark">Policy Brief</span><h6>Campus Disinformation</h6><p class="small text-muted">The rise of antisemitism and institutional literacy responses.</p></div>
-            <div class="glass-card"><span class="badge bg-secondary mb-2">CapX</span><h6>Democracy's Information War</h6><p class="small text-muted">How institutional failure fuels populist disinformation.</p></div>
-            <div class="glass-card" style="background: var(--navy); color: #fff;"><span class="badge bg-accent text-white mb-2">Briefing</span><h6>House of Lords Address</h6><p class="small opacity-75">Briefing on state media manipulation and UK national security.</p></div>
+            <div class="glass-card"><span class="badge badge-talk mb-2">Jan 2026</span><h6>HJS Panel: Losing Narrative</h6><p class="small text-muted">Media trust in the disinformation age.</p></div>
+            <div class="glass-card"><span class="badge badge-report mb-2">2025</span><h6>NGOs: Crisis of Trust</h6><p class="small text-muted">Credibility erosion post-Oct 7th.</p></div>
+            <div class="glass-card"><span class="badge badge-media mb-2">BBC Analysis</span><h6>Serbian Foreign Policy</h6><p class="small text-muted">Balancing EU and Russian interests.</p></div>
+            <div class="glass-card"><span class="badge badge-oped mb-2">UnHerd</span><h6>The Balkan Powderkeg</h6><p class="small text-muted">Regional security threats 2026.</p></div>
+            <div class="glass-card"><span class="badge badge-report mb-2">LSE Report</span><h6>Phases of Propaganda</h6><p class="small text-muted">Thesis breakdown of media mobilization.</p></div>
+            <div class="glass-card"><span class="badge badge-media mb-2">France24</span><h6>EU Defense Unity</h6><p class="small text-muted">Security strategy on eastern borders.</p></div>
+            <div class="glass-card"><span class="badge badge-talk mb-2">LSE Lecture</span><h6>Digital Dehumanization</h6><p class="small text-muted">How narratives fuel physical violence.</p></div>
+            <div class="glass-card"><span class="badge badge-report mb-2">Policy Brief</span><h6>Campus Security</h6><p class="small text-muted">Combating antisemitic disinformation.</p></div>
+            <div class="glass-card"><span class="badge badge-oped mb-2">CapX</span><h6>Democratic Resilience</h6><p class="small text-muted">Institutional failure vs Populism.</p></div>
+            <div class="glass-card"><span class="badge badge-talk mb-2">House of Lords</span><h6>Briefing: Hybrid War</h6><p class="small text-muted">State media manipulation in the UK.</p></div>
+            <div class="glass-card"><span class="badge badge-media mb-2">Al Jazeera</span><h6>Kosovo Standoff</h6><p class="small text-muted">Impact of NATO positioning.</p></div>
+            <div class="glass-card"><span class="badge badge-report mb-2">BCSP</span><h6>Vulnerability Mapping</h6><p class="small text-muted">Russian narratives in Serbian media.</p></div>
+            <div class="glass-card"><span class="badge badge-oped mb-2">The Telegraph</span><h6>The Information Gap</h6><p class="small text-muted">Why counter-propaganda is failing.</p></div>
+            <div class="glass-card"><span class="badge badge-talk mb-2">Oxford Union</span><h6>Political Theory Panel</h6><p class="small text-muted">Discourse of the modern state.</p></div>
+            <div class="glass-card"><span class="badge badge-report mb-2">HJS Policy</span><h6>Media Literacy 2.0</h6><p class="small text-muted">Defending the next generation.</p></div>
+            <div class="glass-card"><span class="badge badge-media mb-2">Times Radio</span><h6>Balkan Instability</h6><p class="small text-muted">Live crisis management analysis.</p></div>
+            <div class="glass-card"><span class="badge badge-oped mb-2">European Voice</span><h6>Strategic Autonomy</h6><p class="small text-muted">The Balkan perspective on EU.</p></div>
+            <div class="glass-card"><span class="badge badge-report mb-2">Thesis Insight</span><h6>Discourse of Victimhood</h6><p class="small text-muted">Psychological roots of propaganda.</p></div>
+            <div class="glass-card"><span class="badge badge-talk mb-2">KCL Seminar</span><h6>Conflict Reporting</h6><p class="small text-muted">Ethical framing in war zones.</p></div>
+            <div class="glass-card"><span class="badge badge-media mb-2">Sky News</span><h6>Global Security Round</h6><p class="small text-muted">Disinformation as a weapon of war.</p></div>
         </div>
     </div>
 </section>
 
-<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content glass-modal p-4 shadow-lg">
-            <div class="modal-header border-0 pb-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-                <h2 class="mb-4">Strategic Inquiry</h2>
-                <form action="https://formspree.io/f/mlgwjoop" method="POST">
-                    <input type="email" name="email" class="form-control rounded-pill mb-3" placeholder="Email Address" required>
-                    <select name="type" class="form-select rounded-pill mb-3">
-                        <option>Media Inquiry</option>
-                        <option>Consultancy Request</option>
-                        <option>Speaking Engagement</option>
-                    </select>
-                    <textarea name="message" class="form-control mb-4" rows="4" style="border-radius: 20px;" placeholder="Message" required></textarea>
-                    <button type="submit" class="btn btn-navy w-100">Submit Inquiry</button>
-                </form>
-            </div>
-        </div>
+<div class="marquee">
+    <div class="marquee-content">
+        <span>London School of Economics</span><span>Oxford University</span><span>BBC World News</span><span>Al Jazeera</span><span>The Telegraph</span><span>UnHerd</span><span>University of Belgrade</span><span>Henry Jackson Society</span>
+        <span>London School of Economics</span><span>Oxford University</span><span>BBC World News</span><span>Al Jazeera</span><span>The Telegraph</span><span>UnHerd</span><span>University of Belgrade</span><span>Henry Jackson Society</span>
     </div>
 </div>
 
@@ -197,10 +211,51 @@
     <div class="container"><p class="opacity-50 small">&copy; 2026 Dr. Helena Ivanov. | <a href="#" data-bs-toggle="modal" data-bs-target="#contactModal" class="text-accent text-decoration-none">Secure Contact</a></p></div>
 </footer>
 
+<div class="modal fade" id="researchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content glass-modal p-5">
+            <h2 class="text-center mb-4">The Propaganda Model</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5>Phases of Mobilization</h5>
+                    <ul class="text-secondary small">
+                        <li>Dehumanization: Defining the 'Other'</li>
+                        <li>Historical Weaponization: Justifying Revenge</li>
+                        <li>Normalization: Making Violence Routine</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Strategic Functions</h5>
+                    <ul class="text-secondary small">
+                        <li>The Discourse of Victimhood</li>
+                        <li>Strategic Ambiguity & Denial</li>
+                        <li>Techniques of Narrative Dominance</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="btn btn-navy mt-4 w-100" data-bs-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content glass-modal p-4 shadow-lg text-center">
+            <h2 class="text-navy mb-4">Strategic Inquiry</h2>
+            <form action="https://formspree.io/f/mlgwjoop" method="POST">
+                <input type="email" name="email" class="form-control rounded-pill mb-3" placeholder="Email Address" required>
+                <select name="type" class="form-select rounded-pill mb-3">
+                    <option>Consultancy Request</option>
+                    <option>Media Commentary</option>
+                    <option>Speaking Engagement</option>
+                </select>
+                <textarea name="message" class="form-control mb-4" rows="4" style="border-radius: 20px;" placeholder="Message" required></textarea>
+                <button type="submit" class="btn btn-navy w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script>
-    ScrollReveal().reveal('.glass-card', { delay: 100, distance: '30px', origin: 'bottom', interval: 50 });
-</script>
 </body>
 </html>
