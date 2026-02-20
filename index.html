@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Helena Ivanov | Political Violence & Propaganda Research</title>
+    <title>Dr. Helena Ivanov | Strategic Advisor</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -11,6 +11,7 @@
             --navy: #002b5b;
             --accent: #d4af37;
             --bg: #fcfcfc;
+            /* Professional Media Palette */
             --cat-media: #4a5568; 
             --cat-oped: #5a67d8;  
             --cat-report: #2d3748; 
@@ -21,7 +22,7 @@
         h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--navy); }
         .amp { font-family: 'Plus Jakarta Sans', sans-serif !important; font-weight: 400; }
 
-        /* Navbar Texture */
+        /* Navbar with Texture */
         .navbar { 
             background-color: rgba(255, 255, 255, 0.95) !important;
             background-image: radial-gradient(#ddd 0.5px, transparent 0.5px);
@@ -41,21 +42,23 @@
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             box-shadow: 0 4px 20px rgba(0,0,0,0.03);
             height: 100%;
-            cursor: pointer;
         }
         .glass-card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
 
+        /* Professional Media Badges */
         .badge-cat { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 6px 14px; border-radius: 4px; color: #fff; margin-bottom: 15px; display: inline-block; }
         .m-media { background: var(--cat-media); }
         .m-oped { background: var(--cat-oped); }
         .m-report { background: var(--cat-report); }
         .m-talk { background: #8b7d6b; } 
 
+        /* CTA Breaks */
         .cta-break { background: var(--navy); color: white; padding: 80px 0; text-align: center; }
         .cta-break h2 { color: white; margin-bottom: 25px; }
 
         .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
 
+        /* Marquee Custom */
         .marquee { overflow: hidden; white-space: nowrap; background: #1a1a1a; padding: 40px 0; border-top: 1px solid var(--accent); border-bottom: 1px solid var(--accent); }
         .marquee-content { display: inline-block; animation: marquee 50s linear infinite; }
         .marquee-content span { font-size: 0.8rem; letter-spacing: 4px; font-weight: 700; color: var(--accent); margin: 0 80px; text-transform: uppercase; opacity: 0.8; }
@@ -63,9 +66,12 @@
 
         .btn-navy { background: var(--navy); color: white; border-radius: 100px; padding: 16px 40px; font-weight: 700; border: none; transition: 0.3s; }
         .btn-navy:hover { background: #001f42; transform: scale(1.05); color: white; }
+        .btn-gold { background: var(--accent); color: white; border-radius: 100px; padding: 16px 40px; font-weight: 700; border: none; }
         
         .hero-img { border-radius: 60px; box-shadow: -40px 40px 100px rgba(0,0,0,0.15); width: 100%; max-width: 500px; }
-        .video-container { border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+
+        .btn-pulse { animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6); } 70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
     </style>
 </head>
 <body>
@@ -78,7 +84,7 @@
         <div class="ms-auto d-flex align-items-center">
             <a href="#about" class="nav-link me-3 d-none d-md-block fw-semibold">About</a>
             <a href="#research" class="nav-link me-3 d-none d-md-block fw-semibold">Research</a>
-            <a href="#services" class="nav-link me-3 d-none d-md-block fw-semibold">Advisory</a>
+            <a href="#services" class="nav-link me-3 d-none d-md-block fw-semibold">Services</a>
             <a href="#media" class="nav-link me-4 d-none d-md-block fw-semibold">Media</a>
             <button class="btn btn-navy btn-sm px-4" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Dr. Ivanov</button>
         </div>
@@ -89,12 +95,12 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <div class="hero-badge mb-4 d-inline-block">PhD (LSE) <span class="mx-2">•</span> MPhil (Oxon)</div>
-                <h1 class="display-2 mb-4">Structural Analysis of <br><i style="font-weight: 400; color: var(--accent);">Public Narrative.</i></h1>
-                <p class="lead mb-5 text-secondary pe-lg-5">Dr. Helena Ivanov specializes in the empirical study of political mobilization and institutional trust. Her work bridges rigorous IR theory with the operational realities of global security.</p>
+                <div class="hero-badge mb-4 d-inline-block">PhD, LSE <span class="mx-2">•</span> Oxford Scholar</div>
+                <h1 class="display-2 mb-4">The Science of <br><i style="font-weight: 400; color: var(--accent);">Public Narrative.</i></h1>
+                <p class="lead mb-5 text-secondary pe-lg-5">Dr. Helena Ivanov deconstructs how information becomes a weapon. From academic theory to global media strategy, she builds narrative resilience in a post-truth era.</p>
                 <div class="d-flex gap-3">
                     <button class="btn btn-navy btn-lg px-5 shadow" data-bs-toggle="modal" data-bs-target="#contactModal">Contact Dr. Ivanov</button>
-                    <a href="#research" class="btn btn-outline-dark btn-lg rounded-pill px-4">Research Model</a>
+                    <a href="#research" class="btn btn-outline-dark btn-lg rounded-pill px-4">The Framework</a>
                 </div>
             </div>
             <div class="col-lg-6 d-none d-lg-block text-end">
@@ -105,36 +111,42 @@
 </header>
 
 <section id="about" class="py-5 bg-white border-top">
-    <div class="container py-5">
-        <div class="row justify-content-center text-center">
+    <div class="container py-5 text-center">
+        <div class="row justify-content-center">
             <div class="col-lg-8">
-                <h2 class="display-5 mb-4">Academic Profile</h2>
-                <p class="lead text-secondary mb-4">Dr. Ivanov is an Associate Research Fellow at the Henry Jackson Society. Her doctoral research at the London School of Economics established a context-agnostic framework for predicting how state-sponsored discourse transitions into conflict.</p>
-                <button class="btn btn-outline-primary rounded-pill px-5" data-bs-toggle="modal" data-bs-target="#bioModal">Review Full Dossier</button>
+                <h2 class="display-5 mb-4">Intellectual Authority <span class="amp">&</span> Impact</h2>
+                <p class="lead text-secondary mb-4">Helena doesn't just study propaganda; she identifies the mechanics of mobilization before they turn into violence. Her journey from the University of Belgrade to Oxford and the LSE has created a unique perspective on global security.</p>
+                <button class="btn btn-outline-primary rounded-pill px-5 mb-5" data-bs-toggle="modal" data-bs-target="#bioModal">View Professional Dossier</button>
             </div>
         </div>
     </div>
 </section>
-
 
 <section id="research" class="py-5 bg-light border-top border-bottom">
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h2 class="display-4 mb-4">The 4-Phase Propaganda Model</h2>
-                <p class="lead text-secondary mb-5">This seminal research deconstructs the lifecycle of propaganda, identifying the critical junctures where domestic discourse transitions into state-sanctioned violence.</p>
-                <button class="btn btn-navy btn-lg px-5 mb-4" data-bs-toggle="modal" data-bs-target="#researchModal">Examine the Framework</button>
+                <span class="text-accent fw-bold text-uppercase mb-3 d-block letter-spacing-2">Proprietary Research</span>
+                <h2 class="display-4 mb-4">The Propaganda Model of Violence</h2>
+                <p class="lead text-secondary mb-4">Developed through extensive analysis of the Yugoslav Wars, this 4-phase model is a novel academic contribution that predicts how state-led discourse transitions into physical conflict.</p>
+                <button class="btn btn-navy btn-lg btn-pulse px-5 mb-4" data-bs-toggle="modal" data-bs-target="#researchModal">Explore the 4-Phase Model</button>
             </div>
             <div class="col-lg-6">
-                <div class="video-container">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/S2qKzB7O2hQ" title="HJS Event Helena Ivanov" allowfullscreen></iframe>
-                    </div>
+                <div class="glass-card p-5 bg-white shadow-lg">
+                    <h5 class="text-navy mb-4">"A defining framework for the 21st century."</h5>
+                    <p class="small italic text-muted mb-0">— Commended by doctoral examiners for providing a context-agnostic tool to analyze modern conflicts from Ukraine to the Middle East.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<div class="cta-break">
+    <div class="container">
+        <h2 class="display-6">Need an expert analysis of narrative risk?</h2>
+        <button class="btn btn-gold btn-lg px-5" data-bs-toggle="modal" data-bs-target="#contactModal">Consult with Helena</button>
+    </div>
+</div>
 
 <div class="marquee">
     <div class="marquee-content">
@@ -146,83 +158,127 @@
 <section id="services" class="py-5">
     <div class="container py-5">
         <div class="text-center mb-5">
-            <h2 class="display-4">Strategic Advisory</h2>
-            <p class="lead text-muted">Evidence-based consultancy for governmental and research institutions.</p>
+            <h2 class="display-4">Consultancy Services</h2>
+            <p class="lead text-muted">Specialized advisory for a world defined by information warfare.</p>
         </div>
         <div class="row g-4 text-center">
-            <div class="col-md-4" onclick="openService('risk')"><div class="glass-card"><h4>Geopolitical Risk</h4><p class="small text-muted">Structural risk mapping for Balkan security and hybrid influence.</p></div></div>
-            <div class="col-md-4" onclick="openService('media')"><div class="glass-card"><h4>Media Advisory</h4><p class="small text-muted">Strategic coaching for experts navigating adversarial media environments.</p></div></div>
-            <div class="col-md-4" onclick="openService('audit')"><div class="glass-card"><h4>Narrative Audits</h4><p class="small text-muted">Empirical evaluation of organizational messaging for disinformation resilience.</p></div></div>
+            <div class="col-md-4"><div class="glass-card"><h4>Geopolitical Risk</h4><p class="small text-muted">Balkan security <span class="amp">&</span> Russian hybrid influence mapping for global stakeholders.</p></div></div>
+            <div class="col-md-4"><div class="glass-card"><h4>Media Advisory</h4><p class="small text-muted">High-stakes coaching for experts and officials navigating adversarial media cycles.</p></div></div>
+            <div class="col-md-4"><div class="glass-card"><h4>Narrative Audits</h4><p class="small text-muted">Identifying institutional vulnerabilities to coordinated disinformation campaigns.</p></div></div>
+            <div class="col-md-4"><div class="glass-card"><h4>Public Diplomacy</h4><p class="small text-muted">Strategic op-ed placement <span class="amp">&</span> long-term institutional narrative development.</p></div></div>
+            <div class="col-md-4"><div class="glass-card"><h4>Policy Transfer</h4><p class="small text-muted">Translating academic research into actionable briefs for legislators and NGOs.</p></div></div>
+            <div class="col-md-4"><div class="glass-card"><h4>Crisis Strategy</h4><p class="small text-muted">Rapid deconstruction of hostile narratives <span class="amp">&</span> deployment of counter-messaging.</p></div></div>
         </div>
     </div>
 </section>
 
 <section id="media" class="py-5 bg-white border-top">
     <div class="container py-5">
-        <div class="text-center mb-5">
-            <h2 class="display-5">Publications <span class="amp">&</span> Expert Testimony</h2>
+        <div class="row justify-content-center mb-5 text-center">
+            <div class="col-lg-8">
+                <h2 class="display-5 mb-4">Impact <span class="amp">&</span> Publications</h2>
+                <p class="lead text-secondary">From the House of Lords to the BBC World Service, Helena’s insights shape the global conversation. This is a record of 2024-2026 engagement.</p>
+            </div>
         </div>
         <div class="bento-grid">
-            <div class="glass-card" onclick="window.open('https://henryjacksonsociety.org/publications/human-rights-ngos-a-crisis-of-trust/', '_blank')">
-                <span class="badge-cat m-report">HJS Report</span><h6>Institutional Credibility</h6><p class="small text-muted">Evaluating the crisis of trust in international NGOs.</p>
-            </div>
-            <div class="glass-card" onclick="window.open('https://unherd.com/author/helena-ivanov/', '_blank')">
-                <span class="badge-cat m-oped">UnHerd</span><h6>Balkan Security Vacuums</h6><p class="small text-muted">Analysis of hybrid security threats in SE Europe.</p>
-            </div>
-            <div class="glass-card" onclick="window.open('https://etheses.lse.ac.uk/4447/', '_blank')">
-                <span class="badge-cat m-report">LSE Thesis</span><h6>Inside Propaganda</h6><p class="small text-muted">Doctoral model on the Yugoslav Wars.</p>
-            </div>
-            </div>
+            <div class="glass-card"><span class="badge-cat m-talk">Jan 2026</span><h6>HJS: Losing Narrative</h6><p class="small text-muted">Media trust in the disinformation age.</p></div>
+            <div class="glass-card"><span class="badge-cat m-report">2025</span><h6>NGOs: Crisis of Trust</h6><p class="small text-muted">Credibility erosion post-Oct 7th.</p></div>
+            <div class="glass-card"><span class="badge-cat m-media">BBC World</span><h6>Serbian Foreign Policy</h6><p class="small text-muted">Balancing EU and Russian interests.</p></div>
+            <div class="glass-card"><span class="badge-cat m-oped">UnHerd</span><h6>The Balkan Powderkeg</h6><p class="small text-muted">Regional security threats 2026.</p></div>
+            <div class="glass-card"><span class="badge-cat m-report">LSE Model</span><h6>Phases of Propaganda</h6><p class="small text-muted">Thesis: Narrative mobilization stages.</p></div>
+            <div class="glass-card"><span class="badge-cat m-media">France24</span><h6>EU Defense Unity</h6><p class="small text-muted">Security strategy on eastern borders.</p></div>
+            <div class="glass-card"><span class="badge-cat m-talk">LSE Lecture</span><h6>Digital Dehumanization</h6><p class="small text-muted">How narratives fuel physical violence.</p></div>
+            <div class="glass-card"><span class="badge-cat m-report">Policy Briefing</span><h6>Campus Security</h6><p class="small text-muted">Combating antisemitic disinformation.</p></div>
+            <div class="glass-card"><span class="badge-cat m-oped">CapX Analysis</span><h6>Democratic Resilience</h6><p class="small text-muted">Institutional failure vs Populism.</p></div>
+            <div class="glass-card"><span class="badge-cat m-talk">House of Lords</span><h6>Hybrid War Briefing</h6><p class="small text-muted">State media manipulation in the UK.</p></div>
+            <div class="glass-card"><span class="badge-cat m-media">Al Jazeera</span><h6>Kosovo Standoff</h6><p class="small text-muted">Impact of NATO positioning.</p></div>
+            <div class="glass-card"><span class="badge-cat m-report">Security Mapping</span><h6>Vulnerability Audit</h6><p class="small text-muted">Russian narratives in Serbian media.</p></div>
+            <div class="glass-card"><span class="badge-cat m-oped">The Telegraph</span><h6>The Information Gap</h6><p class="small text-muted">Why counter-propaganda is failing.</p></div>
+            <div class="glass-card"><span class="badge-cat m-talk">Oxford Union</span><h6>Political Theory</h6><p class="small text-muted">Discourse of the modern state.</p></div>
+            <div class="glass-card"><span class="badge-cat m-report">HJS Strategy</span><h6>Media Literacy 2.0</h6><p class="small text-muted">Defending institutional trust.</p></div>
+            <div class="glass-card"><span class="badge-cat m-media">Times Radio</span><h6>Balkan Instability</h6><p class="small text-muted">Live crisis management analysis.</p></div>
+            <div class="glass-card"><span class="badge-cat m-oped">European Voice</span><h6>Strategic Autonomy</h6><p class="small text-muted">Balkan perspective on EU policy.</p></div>
+            <div class="glass-card"><span class="badge-cat m-report">Research Note</span><h6>Victimhood Discourse</h6><p class="small text-muted">Psychological roots of mobilization.</p></div>
+            <div class="glass-card"><span class="badge-cat m-talk">KCL Seminar</span><h6>Conflict Framing</h6><p class="small text-muted">Ethical reporting in war zones.</p></div>
+            <div class="glass-card"><span class="badge-cat m-media">Sky News</span><h6>Global Security</h6><p class="small text-muted">Disinformation as a weapon of war.</p></div>
+        </div>
     </div>
 </section>
 
-<section class="py-5 bg-navy text-white text-center" style="background: var(--navy);">
+<section class="py-5 bg-navy text-white text-center">
     <div class="container py-5">
-        <h2 class="display-4 mb-4" style="color:white;">Request a Research Briefing</h2>
-        <button class="btn btn-navy btn-lg px-5 py-3 shadow-lg" style="background: var(--accent);" data-bs-toggle="modal" data-bs-target="#contactModal">Start a Conversation</button>
+        <h2 class="display-4 mb-4" style="color:white;">Ready to build narrative resilience?</h2>
+        <p class="lead mb-5 opacity-75">Let's discuss how my research can help your organization navigate the modern information landscape.</p>
+        <button class="btn btn-gold btn-lg px-5 py-3 shadow-lg" data-bs-toggle="modal" data-bs-target="#contactModal">Start a Conversation</button>
     </div>
 </section>
 
-<div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content p-5" style="border-radius:24px;">
-            <h3 id="serviceTitle" class="mb-4"></h3>
-            <p id="serviceDescription" class="text-muted"></p>
-            <button class="btn btn-navy mt-4 w-100" data-bs-dismiss="modal">Close</button>
+<div class="modal fade" id="bioModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content glass-modal p-5" style="border-radius:30px;">
+            <h2 class="mb-4">Professional Dossier</h2>
+            <div class="row">
+                <div class="col-md-6 border-end">
+                    <h5 class="text-accent mb-3">Education</h5>
+                    <p class="small"><strong>PhD International Relations</strong><br>London School of Economics</p>
+                    <p class="small"><strong>MPhil Political Theory</strong><br>University of Oxford</p>
+                    <p class="small"><strong>BA Politics</strong><br>University of Belgrade</p>
+                </div>
+                <div class="col-md-6 ps-4">
+                    <h5 class="text-accent mb-3">Current Roles</h5>
+                    <p class="small">Associate Research Fellow, <strong>Henry Jackson Society</strong></p>
+                    <p class="small">External Fellow, <strong>BCSP</strong></p>
+                    <p class="small">Regular Contributor, <strong>BBC World Service</strong></p>
+                </div>
+            </div>
+            <button class="btn btn-navy mt-4 w-100" data-bs-dismiss="modal">Close Dossier</button>
         </div>
     </div>
 </div>
 
 <div class="modal fade" id="researchModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content p-5" style="border-radius:24px;">
+        <div class="modal-content glass-modal p-5" style="border-radius:40px;">
             <h2 class="text-center mb-5">The 4-Phase Propaganda Model</h2>
             <div class="row g-4 text-start">
                 <div class="col-md-6">
-                    <h5 class="fw-bold">Phase I: Narrative Shaping</h5>
-                    <p class="small text-secondary">The creation of "Us vs. Them" binaries through strategic media framing.</p>
-                    <h5 class="fw-bold mt-4">Phase II: Historical Weaponization</h5>
-                    <p class="small text-secondary">Manipulating trauma to justify revenge as a moral necessity.</p>
+                    <div class="mb-4">
+                        <h5 class="text-navy fw-bold">Phase I: Narrative Shaping</h5>
+                        <p class="small text-secondary">The creation of "Us vs. Them" binaries. Identifying target populations as existential threats to core collective identity.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="text-navy fw-bold">Phase II: Historical Weaponization</h5>
+                        <p class="small text-secondary">Revising history to justify revenge. Narratives of perpetual victimhood are used to morally sanction pre-emptive violence.</p>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <h5 class="fw-bold">Phase III: Dehumanization</h5>
-                    <p class="small text-secondary">Stripping targets of human agency via objectifying media discourse.</p>
-                    <h5 class="fw-bold mt-4">Phase IV: Mobilization</h5>
-                    <p class="small text-secondary">Translating words into state-led violence against civilian populations.</p>
+                    <div class="mb-4">
+                        <h5 class="text-navy fw-bold">Phase III: Dehumanization</h5>
+                        <p class="small text-secondary">The removal of human agency. Language transitions from political disagreement to describing targets as objects or vermin.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="text-navy fw-bold">Phase IV: Mobilization</h5>
+                        <p class="small text-secondary">The transition from word to action. Organized state or group violence is normalized and executed as a "defensive" necessity.</p>
+                    </div>
                 </div>
             </div>
-            <button class="btn btn-navy mt-5 w-100" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-navy mt-5 w-100" data-bs-dismiss="modal">Close Framework</button>
         </div>
     </div>
 </div>
 
 <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content p-4 text-center" style="border-radius:24px;">
+        <div class="modal-content glass-modal p-4 text-center" style="border-radius:30px;">
             <h2 class="text-navy mb-4">Contact Dr. Ivanov</h2>
             <form action="https://formspree.io/f/mlgwjoop" method="POST">
-                <input type="email" name="email" class="form-control rounded-pill mb-3" placeholder="Email" required>
-                <textarea name="message" class="form-control mb-4" rows="4" style="border-radius: 20px;" placeholder="Message" required></textarea>
+                <input type="email" name="email" class="form-control rounded-pill mb-3" placeholder="Professional Email" required>
+                <select name="type" class="form-select rounded-pill mb-3">
+                    <option>Consultancy Request</option>
+                    <option>Media Commentary</option>
+                    <option>Speaking Engagement</option>
+                </select>
+                <textarea name="message" class="form-control mb-4" rows="4" style="border-radius: 20px;" placeholder="How can I assist you?" required></textarea>
                 <button type="submit" class="btn btn-navy w-100">Submit</button>
             </form>
         </div>
@@ -230,24 +286,9 @@
 </div>
 
 <footer class="py-5 bg-dark text-white text-center">
-    <div class="container"><p class="small opacity-50 mb-0">Dr. Helena Ivanov © 2026. Academic Research & Strategic Advisory.</p></div>
+    <div class="container"><p class="opacity-50 small mb-0">&copy; 2026 Dr. Helena Ivanov. All Rights Reserved.</p></div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    function openService(type) {
-        const modal = new bootstrap.Modal(document.getElementById('serviceModal'));
-        const title = document.getElementById('serviceTitle');
-        const desc = document.getElementById('serviceDescription');
-        const data = {
-            risk: { title: 'Geopolitical Risk Analysis', desc: 'Detailed assessments of regional stability and hybrid influence in South-East Europe.' },
-            media: { title: 'Media Advisory', desc: 'Coaching for experts navigating adversarial international media environments.' },
-            audit: { title: 'Narrative Audits', desc: 'Evaluation of organizational messaging for disinformation resilience.' }
-        };
-        title.innerText = data[type].title;
-        desc.innerText = data[type].desc;
-        modal.show();
-    }
-</script>
 </body>
 </html>
